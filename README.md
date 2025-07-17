@@ -32,7 +32,7 @@ A minimalist, brutalist-inspired configuration for [Hyprland](https://hyprland.o
    ```
 
 3. **Install Dependencies**:
-   Ensure you have the necessary dependencies for Hyprland and any additional tools used in this configuration (e.g., `waybar`, `rofi`, `hyprpaper` for wallpaper management). Refer to the [Hyprland Wiki](https://wiki.hyprland.org/) for a full list of recommended packages.
+   Ensure you have the necessary dependencies for Hyprland and any additional tools used in this configuration (e.g., `waybar`, `walker`, `hyprpaper` for wallpaper management). Refer to the [Hyprland Wiki](https://wiki.hyprland.org/) for a full list of recommended packages.
 
 4. **Customize (Optional)**:
    Edit `~/.config/hypr/configs/keyboard/keybinds.conf` to adjust keybinds.
@@ -56,8 +56,7 @@ For detailed configuration options, see the [Hyprland Wiki](https://wiki.hyprlan
 
 ## Screenshots
 
-*Insert screenshot of the desktop here*
-
+*Insert screenshot of the desktop here* ![Desktop Center Layout](/screenshots/desktop_full.jpg?raw=true "Full Desktop Style")
 *Insert screenshot of the workspace overview here*
 
 *Insert screenshot of the application launcher here*
@@ -65,7 +64,7 @@ For detailed configuration options, see the [Hyprland Wiki](https://wiki.hyprlan
 ## Usage
 
 - **Status Bar**: Configured with `waybar` for a minimal, functional interface.
-- **Application Launcher**: Launch apps with `rofi` using `SUPER + R`.
+- **Application Launcher**: Launch apps with `walker` using `SUPER + R`.
 
 ## Contributing
 
