@@ -1,0 +1,278 @@
+@define-color font_color_primary #FFFFFF;
+@define-color font_color_secondary #000000;
+@define-color color_1 #FF0080;
+@define-color color_2 #00FF80;
+@define-color color_3 #FF4040;
+@define-color color_4 #FFFF00;
+@define-color color_5 #4040FF;
+@define-color color_6 #808080;
+@define-color color_7 #FF8040;
+@define-color color_8 #00FF00;
+@define-color color_9 #FF40FF;
+@define-color color_10 #8040FF;
+@define-color color_11 #808040;
+@define-color color_12 #FFFF80;
+@define-color color_13 #000000;
+@define-color color_14 #FFFFFF;
+@define-color color_15 #FF0000;
+@define-color color_16 #40FF40;
+@define-color color_17 #40FFFF;
+@define-color color_18 #FF8080;
+@define-color color_19 #FF80FF;
+@define-color color_20 #80FFFF;
+
+@define-color color-box-shadow #000000;
+
+* {
+    font-family: "Departure Mono Nerd Font", "Fira Code", monospace;
+    font-size: 13px;
+    font-weight: normal;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @font_color_primary;
+    transition: none;
+}
+
+/* Workspaces */
+#workspaces, #taskbar {
+    background-color: @color_1;
+    margin: 4px 4px 4px 8px;
+    border: 3px solid @color_13;
+    box-shadow: 4px 4px 0px @color-box-shadow
+}
+
+#workspaces button, #taskbar button {
+    padding: 4px 8px;
+    background-color: @color_1;
+    color: @color_13;
+    border: none;
+    border-right: 2px solid @color_13;
+}
+
+#workspaces button:last-child, #taskbar button:last-child {
+    border-right: none;
+}
+
+#workspaces button:hover, #taskbar button:hover {
+    background-color: @color_14;
+    color: @font_color_seconday;
+}
+
+#workspaces button.active, #taskbar button.active {
+    background-color: @color_2;
+    color: @font_color_secondary;
+}
+
+#workspaces button.urgent {
+    background-color: @color_3;
+    color: @font_color_secondary;
+}
+
+/**
+ * General styles
+ * Add elements to these lists to give them the general shadow
+ * and outline. Or change the general appearance of each element.
+*/
+
+#clock,
+#taskbar,
+#cpu,
+#memory,
+#disk,
+#network,
+#bluetooth,
+#pulseaudio,
+#backlight,
+#temperature,
+#tray,
+#battery,
+#custom-power,
+#custom-media,
+#mpris,
+#language,
+#keyboard-state,
+#idle_inhibitor {
+    box-shadow: 4px 4px 0px @color-box-shadow;
+    border: 3px solid @color_13;
+}
+
+/** Padding rules */
+#clock,
+#cpu,
+#memory,
+#disk,
+#network,
+#bluetooth,
+#pulseaudio,
+#backlight,
+#temperature,
+#tray,
+#battery,
+#custom-power,
+#custom-media,
+#mpris,
+#language,
+#keyboard-state,
+#idle_inhibitor {
+    padding: 4px 12px;
+    margin: 4px;
+}
+
+
+
+/* Window title */
+#window {
+    background-color: @color_2;
+    color: @font_color_primary;
+    border: 0px solid @color_13;
+}
+
+/* Clock */
+#clock {
+    background-color: @color_4;
+    color: @color_13;
+}
+
+/* Active windows */
+#taskbar {
+    background-color: @color_2;
+}
+
+#taskbar.empty {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+#taskbar button {
+    background-color: @color_5;
+}
+
+
+/* CPU */
+#cpu {
+    background-color: @color_3;
+    color: @font_color_secondary;
+}
+
+/* Memory */
+#memory {
+    background-color: @color_5;
+    color: @font_color_secondary;
+}
+
+/* Disk */
+#disk {
+    background-color: @color_7;
+    color: @font_color_secondary;
+}
+
+/* Network */
+#network {
+    background-color: @color_10;
+    color: @font_color_primary;
+}
+
+/* Bluetooth */
+#bluetooth {
+    background-color: @color_16;
+    color: @font_color_secondary;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+    background-color: @color_9;
+    color: @font_color_secondary;
+}
+
+/* Battery */
+#battery {
+    background-color: @color_17;
+    color: @font_color_secondary;
+}
+
+#battery.charging {
+    background-color: @color_8;
+    color: @font_color_secondary;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @color_15;
+    color: @font_color_primary;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: @color_14;
+        color: @color_15;
+    }
+}
+
+/* Backlight */
+#backlight {
+    background-color: @color_12;
+    color: @font_color_secondary;
+}
+
+/* Temperature */
+#temperature {
+    background-color: @color_18;
+    color: @font_color_secondary;
+}
+
+#custom-power {
+    background-color: @color_3;
+    color: @font_color_primary;
+    margin: 4px 8px 4px 4px;
+}
+
+/* Mode indicator */
+#mode {
+    background-color: @color_14;
+    color: @font_color_secondary;
+}
+
+/* Idle inhibitor */
+#idle_inhibitor {
+    background-color: @color_11;
+    color: @font_color_primary;
+}
+
+#idle_inhibitor.activated {
+    background-color: @color_4;
+    color: @font_color_secondary;
+}
+
+/* MPRIS */
+#mpris {
+    background-color: @color_19;
+    color: @font_color_secondary;
+}
+
+/* Language */
+#language {
+    background-color: @color_20;
+    color: @font_color_secondary;
+}
+
+/* Keyboard state */
+#keyboard-state {
+    background-color: @color_12;
+    color: @font_color_secondary;
+}
+
+#keyboard-state > label {
+    padding: 0 4px;
+}
+
+#keyboard-state > label.locked {
+    background-color: @color_15;
+    color: @font_color_primary;
+}
