@@ -22,7 +22,6 @@
 @define-color color_20 #80FFFF;
 
 @define-color color-box-shadow #000000;
-
 * {
     font-family: "Departure Mono Nerd Font", "Fira Code", monospace;
     font-size: 13px;
